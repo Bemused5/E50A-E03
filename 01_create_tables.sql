@@ -1,12 +1,4 @@
-\set ON_ERROR_STOP on
 
--- =========================================================
--- 0) Asegurar que existe la DB "exercises" (tu workflow la usa)
---    (Esto corre estando conectado a test_db)
--- =========================================================
-SELECT 'CREATE DATABASE exercises'
-WHERE NOT EXISTS (SELECT 1 FROM pg_database WHERE datname = 'exercises')
-\gexec;
 
 -- =========================================================
 -- 1) Crear TODO en la DB actual (test_db)
